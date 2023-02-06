@@ -33,6 +33,9 @@ class Order extends Model
      */
     protected $fillable = ['price','client_id'];
 
-
+    public function client()
+    {
+      return $this->belongsTo(Client::class);
+    }
 
 }
