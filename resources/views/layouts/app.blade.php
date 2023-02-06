@@ -52,6 +52,16 @@
                                 </li>
                             @endif
                         @else
+                            @if (Route::has('clients.index'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('clients.index') }}"> Clientes</a>
+                                </li>
+                            @endif
+                            @if (Route::has('orders.index'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('orders.index') }}"> Pedidos</a>
+                                </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
